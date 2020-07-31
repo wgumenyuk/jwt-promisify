@@ -103,7 +103,7 @@ export function verify(
 
 /**
     Returns the decoded payload without verifying if the signature is valid.
-    @param token                Token to be verified.
+    @param token                Token to be decoded.
     @param [options]            Options for decoding.
 */
 export function decode(
