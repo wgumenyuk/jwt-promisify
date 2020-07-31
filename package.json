@@ -16,6 +16,11 @@
     "url": "https://github.com/wgumenyuk/jwt-promisify/issues"
   },
   "homepage": "https://github.com/wgumenyuk/jwt-promisify#readme",
+  "files": [
+    "index.js",
+    "index.d.ts",
+    "./lib"
+  ],
   "dependencies": {
     "jsonwebtoken": "^8.5.1"
   },
