@@ -21,7 +21,7 @@
   
   <p>
     <a href="https://npmjs.com/package/jwt-promisify">
-      <img src="https://nodei.co/npm/jwt-promisify.png)" alt="NPM stats"/>
+      <img src="https://nodei.co/npm/jwt-promisify.png" alt="NPM stats"/>
     </a>
   </p>
 </div>
@@ -149,10 +149,13 @@ List of supported algorithms:
 | ES512     | ECDSA using P-521 curve and SHA-512 hash algorithm.                     |
 | none      | No digital signature or MAC value included.                             |
 
+<br/>
+
 ## Links
 - [NPM](https://npmjs.com/package/jwt-promisify)
 - [GitHub](https://github.com/wgumenyuk/jwt-promisify)
 
 ## License
 This project ist licensed under [MIT](./LICENSE).
+
 &copy; 2020 [Wlad Gumenyuk](https://github.com/wgumenyuk)
