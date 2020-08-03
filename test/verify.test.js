@@ -1,6 +1,24 @@
 var jwt = require("../index");
 
 describe("verify() function", () => {
+    // Invalid audience
+    describe("invalid audience", () => {
+        // { foo: "bar", aud: "user" }
+        var token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmb28iOiJiYXIiLCJhdWQiOiJ1c2VyIn0.-6WdAUZ_k_XRVXUD1vyxTrh5JXJog4XT2qgdKawC5aQ";
+        var secret = "secret";
+        var options = {
+            audience: ["test", /^user1$/]
+        };
+
+        test("it should throw JsonWebTokenError \"jwt audience invalid\"", async () => {
+            try {
+                await jwt.verify(token, secret, options);
+            } catch(error) {
+                expect(error.name).toEqual("JsonWebTokenError");
+                expect(error.message).toEqual("jwt audience invalid. expected: test or /^user1$/");
+            }
+        });
+    });
 
     // Invalid signature
     describe("invalid signature", () => {
@@ -8,7 +26,7 @@ describe("verify() function", () => {
         var token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmb28iOiJiYXIifQ.dtxWM6MIcgoeMgH87tGvsNDY6cHWL6MGW4LeYvnm1JA";
         var secret = "invalidSecret";
 
-        test("it should throw JsonWebTokenError", async () => {
+        test("it should throw JsonWebTokenError \"invalid signature\"", async () => {
             try {
                 await jwt.verify(token, secret);
             } catch(error) {

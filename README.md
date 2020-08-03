@@ -87,7 +87,7 @@ Options for signing the token.
 
 | Parameter     | Type                     | Optional | Default | Description                                                                                        |
 |---------------|--------------------------|----------|---------|----------------------------------------------------------------------------------------------------|
-| algorithm     | [Algorithm](#algorithms) | ✔        | HS256   | Signing algorithm.                                                                                 |
+| algorithm     | [Algorithm](#algorithm) | ✔        | HS256   | Signing algorithm.                                                                                 |
 | audience      | String, Array<String>    | ✔        | None    | The token's audience.                                                                              |
 | encoding      | String                   | ✔        | None    | The token's encoding.                                                                              |
 | expiresIn     | String, Number           | ✔        | None    | Expressed in seconds or a string describing a time span [vercel/ms](https://github.com/vercel/ms). |
@@ -107,7 +107,7 @@ Options for the validation.
 
 | Parameter        | Type                            | Optional | Default | Description                                                                                        |
 |------------------|---------------------------------|----------|---------|----------------------------------------------------------------------------------------------------|
-| algorithms       | Array<[Algorithm](#algorithms)> | ✔        | None    | List of the names of allowed algorithms.                                                           |
+| algorithms       | Array<[Algorithm](#algorithm)> | ✔        | None    | List of the names of allowed algorithms.                                                           |
 | audience         | String, Array<String>           | ✔        | None    | The token's expected audience.                                                                     |
 | clockTolerance   | Number                          | ✔        | 0       | Number of seconds to tolerate when checking `nbf` and `exp` claims.                                |
 | complete         | Boolean                         | ✔        | false   | Return an object `{ header, payload, signature }` instead of only the content of the payload.      |

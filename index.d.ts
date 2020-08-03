@@ -40,7 +40,7 @@ export interface SignOptions {
 
 export interface VerifyOptions {
     algorithms?: Algorithm[];
-    audience?: string | string[];
+    audience?: string | RegExp | (string | RegExp)[];
     clockTolerance?: number;
     complete?: boolean;
     issuer?: string;
