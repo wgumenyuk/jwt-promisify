@@ -87,8 +87,8 @@ Options for signing the token.
 
 | Parameter     | Type                     | Optional | Default | Description                                                                                        |
 |---------------|--------------------------|----------|---------|----------------------------------------------------------------------------------------------------|
-| algorithm     | [Algorithm](#algorithm) | ✔        | HS256   | Signing algorithm.                                                                                 |
-| audience      | String, Array<String>    | ✔        | None    | The token's audience.                                                                              |
+| algorithm     | [Algorithm](#algorithm)  | ✔        | HS256   | Signing algorithm.                                                                                 |
+| audience      | String, Array\<String>   | ✔        | None    | The token's audience.                                                                              |
 | encoding      | String                   | ✔        | None    | The token's encoding.                                                                              |
 | expiresIn     | String, Number           | ✔        | None    | Expressed in seconds or a string describing a time span [vercel/ms](https://github.com/vercel/ms). |
 | header        | Object                   | ✔        | None    | The token's header.                                                                                |
@@ -105,18 +105,18 @@ Options for signing the token.
 ### `VerifyOptions`
 Options for the validation.
 
-| Parameter        | Type                            | Optional | Default | Description                                                                                        |
-|------------------|---------------------------------|----------|---------|----------------------------------------------------------------------------------------------------|
-| algorithms       | Array<[Algorithm](#algorithm)> | ✔        | None    | List of the names of allowed algorithms.                                                           |
-| audience         | String, Array<String>           | ✔        | None    | The token's expected audience.                                                                     |
-| clockTolerance   | Number                          | ✔        | 0       | Number of seconds to tolerate when checking `nbf` and `exp` claims.                                |
-| complete         | Boolean                         | ✔        | false   | Return an object `{ header, payload, signature }` instead of only the content of the payload.      |
-| issuer           | String                          | ✔        | None    | The token's expected issuer.                                                                       |
-| ignoreExpiration | Boolean                         | ✔        | false   | Whether to ignore the expiration or not.                                                           |
-| ignoreNotBefore  | Boolean                         | ✔        | false   | Whether to ignore the activation timestamp or not.                                                 |
-| jwtid            | String                          | ✔        | None    | If you want to check the JWTID, provide a value here.                                              |
-| maxAge           | String, Number                  | ✔        | None    | Expressed in seconds or a string describing a time span [vercel/ms](https://github.com/vercel/ms). |
-| nonce            | String                          | ✔        | None    | If you want to check the `nonce` claim, provide a value here.                                      |
+| Parameter        | Type                                    | Optional | Default | Description                                                                                        |
+|------------------|-----------------------------------------|----------|---------|----------------------------------------------------------------------------------------------------|
+| algorithms       | Array<[Algorithm](#algorithm)>          | ✔        | None    | List of the names of allowed algorithms.                                                           |
+| audience         | String, RegExp, Array<String \| RegExp> | ✔        | None    | The token's expected audience.                                                                     |
+| clockTolerance   | Number                                  | ✔        | 0       | Number of seconds to tolerate when checking `nbf` and `exp` claims.                                |
+| complete         | Boolean                                 | ✔        | false   | Return an object `{ header, payload, signature }` instead of only the content of the payload.      |
+| issuer           | String                                  | ✔        | None    | The token's expected issuer.                                                                       |
+| ignoreExpiration | Boolean                                 | ✔        | false   | Whether to ignore the expiration or not.                                                           |
+| ignoreNotBefore  | Boolean                                 | ✔        | false   | Whether to ignore the activation timestamp or not.                                                 |
+| jwtid            | String                                  | ✔        | None    | If you want to check the JWTID, provide a value here.                                              |
+| maxAge           | String, Number                          | ✔        | None    | Expressed in seconds or a string describing a time span [vercel/ms](https://github.com/vercel/ms). |
+| nonce            | String                                  | ✔        | None    | If you want to check the `nonce` claim, provide a value here.                                      |
 
 <br/>
 
@@ -125,8 +125,8 @@ Options for decoding.
 
 | Parameter | Type    | Optional | Default | Description                                                                                   |
 |-----------|---------|----------|---------|-----------------------------------------------------------------------------------------------|
-| complete  | Boolean | ✔        | false   | Whether to force `JSON.parse()` on payload or not.                                            |
-| json      | Boolean | ✔        | false   | Return an object `{ header, payload, signature }` instead of only the content of the payload. |
+| complete  | Boolean | ✔        | false   | Return an object `{ header, payload, signature }` instead of only the content of the payload. |
+| json      | Boolean | ✔        | false   | Whether to force `JSON.parse()` on payload or not.                                            |
 
 <br/>
 
@@ -156,6 +156,6 @@ List of supported algorithms:
 - [GitHub](https://github.com/wgumenyuk/jwt-promisify)
 
 ## License
-This project ist licensed under [MIT](./LICENSE).
+This project is licensed under [MIT](./LICENSE).
 
 &copy; 2020 [Wlad Gumenyuk](https://github.com/wgumenyuk)
