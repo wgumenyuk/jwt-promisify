@@ -3,6 +3,10 @@ All notable changes to this project will be documented in this file starting fro
 <br/>
 This project follows the [SemVer specification](https://semver.org).
 
+### 1.1.1 (August 04, 2020)
+- Fixed typo in README
+- Fixed wrong documentation in README
+
 ### 1.1.0 (August 03, 2020)
 - Improved type definitions for `VerifyOptions.audience`
     - Can now be a string, a regular expression or a list of strings and / or regular expressions.
