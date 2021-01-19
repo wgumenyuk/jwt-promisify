@@ -3,6 +3,9 @@ All notable changes to this project will be documented in this file starting fro
 <br/>
 This project follows the [SemVer specification](https://semver.org).
 
+### 1.1.2 (January 19, 2021)
+- Fixed issue [#1](https://github.com/wgumenyuk/jwt-promisify/issues/1)
+
 ### 1.1.1 (August 04, 2020)
 - Fixed typo in README
 - Fixed wrong documentation in README
