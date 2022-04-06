@@ -1,19 +1,19 @@
+const jwt = require("jsonwebtoken");
+
 /**
-    Verifies a token with a secret or public key and returns the payload.
-    @author Wlad Gumenyuk
+    Verifies and decodes a given token.
 */
+const verify = (token, key, options = {}) => {
+    return new Promise((resolve, reject) => {
+        jwt.verify(token, key, options, (error, payload) => {
+            if(error) {
+                reject(error);
+                return;
+            }
 
-var { verify } = require("jsonwebtoken");
-
-module.exports = async (token, secretOrPublicKey, options = {}) => new Promise((resolve, reject) => {
-    verify(token, secretOrPublicKey, options, (error, payload) => {
-        // Return error if one occured
-        if(error) {
-            reject(error);
-            return;
-        }
-
-        // Return decoded payload
-        resolve(payload);
+            resolve(payload);
+        });
     });
-});
+};
+
+module.exports = verify;

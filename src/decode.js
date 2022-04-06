@@ -1,18 +1,13 @@
+const jwt = require("jsonwebtoken");
+
 /**
-    Returns the payload without verifying if the signature is valid. 
-    @author Wlad Gumenyuk
+    Decodes a token payload without verifying the signature.
 */
-
-var { decode } = require("jsonwebtoken");
-
-module.exports = async (token, options = {}) => {
-    try {
-        var payload = await decode(token, options);
-
-        // Return decoded payload
-        return Promise.resolve(payload);
-    } catch(error) {
-        // Return error if one occured
-        return Promise.reject(error);
-    }
+const decode = (token, options = {}) => {
+    return new Promise((resolve) => {
+        const payload = jwt.decode(token, options);
+        resolve(payload);
+    });
 };
+
+module.exports = decode;

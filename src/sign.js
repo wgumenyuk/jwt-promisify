@@ -1,19 +1,19 @@
+const jwt = require("jsonwebtoken");
+
 /**
-    Signs the payload and returns a token.
-    @author Wlad Gumenyuk
+    Signs a payload and generates a token.
 */
+const sign = (payload, key, options = {}) => {
+    return new Promise((resolve, reject) => {
+        jwt.sign(payload, key, options, (error, token) => {
+            if(error) {
+                reject(error);
+                return;
+            }
 
-var { sign } = require("jsonwebtoken");
-
-module.exports = (payload, secretOrPrivateKey, options = {}) => new Promise((resolve, reject) => {
-    sign(payload, secretOrPrivateKey, options, (error, token) => {
-        // Return error if one occured
-        if(error) {
-            reject(error);
-            return;
-        }
-
-        // Return encoded token
-        resolve(token);
+            resolve(token);
+        });
     });
-});
+};
+
+module.exports = sign;
