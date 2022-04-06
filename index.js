@@ -1,5 +1,9 @@
+const decode = require("./src/decode");
+const sign = require("./src/sign");
+const verify = require("./src/verify");
+
 module.exports = {
-    sign: require("./lib/sign"),
-    verify: require("./lib/verify"),
-    decode: require("./lib/decode")
+    decode,
+    sign,
+    verify
 };
