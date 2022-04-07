@@ -1,7 +1,7 @@
 const jwt = require("jsonwebtoken");
 
 /**
-    Decodes a token payload without verifying the signature.
+    Decodes a token without verifying the signature.
 */
 const decode = (token, options = {}) => {
     return new Promise((resolve) => {
