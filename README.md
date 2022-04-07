@@ -1,4 +1,5 @@
 <div align="center">
+  <br/>
   <p>
     <img src="./assets/logo.png" alt="jwt-promisify" width="546px"/>
   </p>
