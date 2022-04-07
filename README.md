@@ -8,7 +8,7 @@
   [![Travis CI](https://img.shields.io/travis/com/wgumenyuk/jwt-promisify?label=Build&style=flat-square)](https://travis-ci.com/github/wgumenyuk/jwt-promisify)
   [![NPM downloads](https://img.shields.io/npm/dt/jwt-promisify?label=Downloads&style=flat-square)](https://www.npmjs.com/package/jwt-promisify)
   [![Size](https://img.shields.io/bundlephobia/minzip/jwt-promisify?label=Size&style=flat-square)](https://github.com/wgumenyuk/jwt-promisify)
-  [![License](https://img.shields.io/github/license/wgumenyuk/msn-weather?label=License&style=flat-square)](./LICENSE)
+  [![License](https://img.shields.io/github/license/wgumenyuk/jwt-promisify?label=License&style=flat-square)](./LICENSE)
 
   [![NPM install info](https://nodei.co/npm/jwt-promisify.png?downloads=true&stars=true)](https://www.npmjs.com/package/jwt-promisify)
 </div>
