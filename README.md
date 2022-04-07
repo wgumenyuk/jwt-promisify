@@ -18,6 +18,9 @@
 - [Installation](#installation)
 - [Usage](#usage)
   - [API Documentation](#api-documentation)
+- [Resources](#resources)
+- [Acknowledgements](#acknowledgements)
+- [License](#license)
 
 ## About
 `jwt-promisify` is a wrapper for [`jsonwebtoken`](https://www.npmjs.com/package/jsonwebtoken)  with support for Promises and TypeScript.
