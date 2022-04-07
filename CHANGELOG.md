@@ -3,6 +3,11 @@ All notable changes to this project will be documented in this file starting fro
 <br/>
 This project follows the [SemVer specification](https://semver.org).
 
+### 1.1.4 (April 07, 2022)
+- Refactored code
+- Improved README
+- Improved TypeScript definitions
+
 ### 1.1.3 (January 23, 2021)
 - Removed `console.log()`
 
