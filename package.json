@@ -18,7 +18,7 @@
     "promise",
     "asnyc"
   ],
-  "author": "Wlad Gumenyuk",
+  "author": "Wlad G. Gumenyuk",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/wgumenyuk/jwt-promisify/issues"
@@ -27,7 +27,7 @@
   "files": [
     "index.js",
     "index.d.ts",
-    "lib"
+    "src"
   ],
   "dependencies": {
     "jsonwebtoken": "^8.5.1"
