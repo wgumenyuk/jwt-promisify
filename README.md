@@ -57,11 +57,11 @@ Decodes a token without verifying the signature. Returns `null` if the token can
 #### `jwt.sign(payload, key, options)`
 Signs a payload and generates a token.
 
-| Parameter | Type                         | Optional | Description           |
-|-----------|------------------------------|----------|-----------------------|
-| `payload` | `string`, `object`, `buffer` | ❌       | Token payload.        |
-| `key`     | [`Key`](#key)                | ❌       | Secret key.           |
-| `options` | `SignOptions`                | ✔        | Options for signing.  |
+| Parameter | Type                              | Optional | Description           |
+|-----------|-----------------------------------|----------|-----------------------|
+| `payload` | `string`, `object`, [`Buffer`][1] | ❌       | Token payload.        |
+| `key`     | [`Key`](#key)                     | ❌       | Secret key.           |
+| `options` | `SignOptions`                     | ✔        | Options for signing.  |
 
 #### `jwt.verify(token, key, options)`
 Verifies and decodes a given token.
@@ -76,7 +76,7 @@ Verifies and decodes a given token.
 A secret key used for signing and verifying tokens. Can be one of the following:
 
 - `string`
-- [`Buffer`](https://nodejs.org/api/buffer.html#buffer)
+- [`Buffer`][1]
 - `{ key: string; passphrase: string; }`
 
 ## Resources
@@ -89,3 +89,6 @@ A secret key used for signing and verifying tokens. Can be one of the following:
 
 ## License
 This project is licensed under [MIT](./LICENSE).
+
+<!-- Links -->
+[1]: https://nodejs.org/api/buffer.html#buffer
