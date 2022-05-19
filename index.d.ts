@@ -70,6 +70,7 @@ export type VerifyOptions = {
     jwtid?: string;
     nonce?: string;
     subject?: string;
+    maxAge?: number;
 };
 
 export type DecodeOptions = {
