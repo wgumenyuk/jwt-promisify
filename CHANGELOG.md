@@ -3,6 +3,9 @@ All notable changes to this project will be documented in this file starting fro
 <br/>
 This project follows the [SemVer specification](https://semver.org).
 
+### 1.1.5 (May 19, 2022)
+- Added `maxAge` to `VerifyOptions` [#2](https://github.com/wgumenyuk/jwt-promisify/issues/11)
+
 ### 1.1.4 (April 07, 2022)
 - Refactored code
 - Improved README
