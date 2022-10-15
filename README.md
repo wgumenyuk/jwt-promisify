@@ -52,7 +52,8 @@ Decodes a token without verifying the signature. Returns `null` if the token can
 | `token`   | `string`        | ❌       | A signed token.       |
 | `options` | `DecodeOptions` | ✔        | Options for decoding. |
 
-> ⚠ This method does **not** verify the signature. You should **not** use this method to decode untrusted tokens. You most likely want to use [`jwt.verify()`](#jwtverifytoken-key-options) instead.
+> **Warning**
+> This method does **not** verify the signature. You should **not** use this method to decode untrusted tokens. You most likely want to use [`jwt.verify()`](#jwtverifytoken-key-options) instead.
 
 #### `jwt.sign(payload, key, options)`
 Signs a payload and generates a token.
