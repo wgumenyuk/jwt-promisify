@@ -47,10 +47,10 @@ const jwt = require("jwt-promisify");
 #### `jwt.decode(token)`
 Decodes a token without verifying the signature. Returns `null` if the token cannot be decoded.
 
-| Parameter | Type            | Optional | Description           |
-|-----------|-----------------|----------|-----------------------|
-| `token`   | `string`        | ❌       | A signed token.       |
-| `options` | `DecodeOptions` | ✔        | Options for decoding. |
+| Parameter | Type                 | Optional | Description           |
+|-----------|----------------------|----------|-----------------------|
+| `token`   | `string`             | ❌       | A signed token.       |
+| `options` | [`DecodeOptions`][2] | ✔        | Options for decoding. |
 
 > **Warning**
 > This method does **not** verify the signature. You should **not** use this method to decode untrusted tokens. You most likely want to use [`jwt.verify()`](#jwtverifytoken-key-options) instead.
@@ -62,16 +62,16 @@ Signs a payload and generates a token.
 |-----------|-----------------------------------|----------|-----------------------|
 | `payload` | `string`, `object`, [`Buffer`][1] | ❌       | Token payload.        |
 | `key`     | [`Key`](#key)                     | ❌       | Secret key.           |
-| `options` | `SignOptions`                     | ✔        | Options for signing.  |
+| `options` | [`SignOptions`][3]                | ✔        | Options for signing.  |
 
 #### `jwt.verify(token, key, options)`
 Verifies and decodes a given token.
 
-| Parameter | Type            | Optional | Description           |
-|-----------|-----------------|----------|-----------------------|
-| `token`   | `string`        | ❌       | A signed token.       |
-| `key`     | [`Key`](#key)   | ❌       | Secret key.           |
-| `options` | `VerifyOptions` | ✔        | Options for signing.  |
+| Parameter | Type                 | Optional | Description           |
+|-----------|----------------------|----------|-----------------------|
+| `token`   | `string`             | ❌       | A signed token.       |
+| `key`     | [`Key`](#key)        | ❌       | Secret key.           |
+| `options` | [`VerifyOptions`][4] | ✔        | Options for signing.  |
 
 #### `Key`
 A secret key used for signing and verifying tokens. Can be one of the following:
@@ -93,3 +93,6 @@ This project is licensed under [MIT](./LICENSE).
 
 <!-- Links -->
 [1]: https://nodejs.org/api/buffer.html#buffer
+[2]: https://github.com/wgumenyuk/jwt-promisify/blob/main/index.d.ts#L76
+[3]: https://github.com/wgumenyuk/jwt-promisify/blob/main/index.d.ts#L46
+[4]: https://github.com/wgumenyuk/jwt-promisify/blob/main/index.d.ts#L61
