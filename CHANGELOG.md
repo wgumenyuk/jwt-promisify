@@ -3,6 +3,10 @@ All notable changes to this project will be documented in this file starting fro
 <br/>
 This project follows the [SemVer specification](https://semver.org).
 
+### Unreleased
+- Added links to `DecodeOptions`, `SignOptions` and `VerifyOptions` in README
+- Improved warning in README
+
 ### 1.1.5 (May 19, 2022)
 - Added `maxAge` to `VerifyOptions` [#2](https://github.com/wgumenyuk/jwt-promisify/issues/11)
 
