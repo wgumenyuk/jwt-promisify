@@ -3,7 +3,7 @@ All notable changes to this project will be documented in this file starting fro
 <br/>
 This project follows the [SemVer specification](https://semver.org).
 
-### Unreleased
+### 1.1.6 (October 25, 2022)
 - Added links to `DecodeOptions`, `SignOptions` and `VerifyOptions` in README
 - Improved warning in README
 
