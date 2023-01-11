@@ -17,7 +17,7 @@ export type Header = {
     alg: string | Algorithm;
     typ?: string;
     cty?: string;
-    crit?: Array<string | Exclude<keyof Header, 'crit'>>;
+    crit?: Array<string | Exclude<keyof Header, "crit">>;
     kid?: string;
     jku?: string;
     x5u?: string | string[];
