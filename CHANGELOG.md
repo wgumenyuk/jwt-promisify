@@ -3,6 +3,11 @@ All notable changes to this project will be documented in this file starting fro
 <br/>
 This project follows the [SemVer specification](https://semver.org).
 
+### 1.1.7 (January 11, 2023)
+- Added doc comments to type definitions
+- Updated dependencies to latest version
+    - `jsonwebtoken` (`8.5.1` -> `9.0.0`)
+
 ### 1.1.6 (October 25, 2022)
 - Added links to `DecodeOptions`, `SignOptions` and `VerifyOptions` in README
 - Improved warning in README
