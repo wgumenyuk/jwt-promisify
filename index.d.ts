@@ -95,22 +95,34 @@ export class NotBeforeError extends JsonWebTokenError {
 }
 
 // Functions
+/**
+    Decodes a token without verifying the signature.
+*/
 export function decode(
     token: string,
     options: DecodeOptions & { complete: true }
 ): Promise<Token | null>;
 
+/**
+    Decodes a token without verifying the signature.
+*/
 export function decode(
     token: string,
     options?: DecodeOptions
 ): Promise<Record<string, any> | null>;
 
+/**
+    Signs a payload and generates a token.
+*/
 export function sign(
     payload: string | object | Buffer,
     key: Key,
     options?: SignOptions
 ): Promise<string>;
 
+/**
+    Verifies and decodes a given token.
+*/
 export function verify<T = Record<string, any>>(
     token: string,
     key: Key,
