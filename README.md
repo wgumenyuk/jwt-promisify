@@ -13,6 +13,8 @@
   [![NPM install info](https://nodei.co/npm/jwt-promisify.png?downloads=true&stars=true)](https://www.npmjs.com/package/jwt-promisify)
 </div>
 
+> ⚠️ This package is no longer necessary because all function calls are now completed synchronously. Please use [`jsonwebtoken`](https://www.npmjs.com/package/jsonwebtoken) directly.
+
 ## Table of contents
 - [About](#about)
 - [Installation](#installation)
